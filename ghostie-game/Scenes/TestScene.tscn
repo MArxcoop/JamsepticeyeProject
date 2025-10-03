@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dol376qsjal3h"]
+
+[ext_resource type="PackedScene" uid="uid://nymso7v27gt7" path="res://Objects/Player/ghost_player.tscn" id="1_b5ayd"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
+
+[node name="ghostPlayer" parent="." instance=ExtResource("1_b5ayd")]
