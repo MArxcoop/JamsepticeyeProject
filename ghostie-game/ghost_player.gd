@@ -1,13 +1,13 @@
 extends CharacterBody2D
 
 
-const SPEED = 75
+const SPEED = 80
 const JUMP_VELOCITY = -400.0
 
 
 func _physics_process(float) -> void:
-	var direction := Input.get_axis("ui_left", "ui_right")
-	var yDirection := Input.get_axis("ui_up", "ui_down")
+	var direction := Input.get_axis("left", "right")
+	var yDirection := Input.get_axis("up", "down")
 	if direction:
 		velocity.x = direction * SPEED
 	else:
