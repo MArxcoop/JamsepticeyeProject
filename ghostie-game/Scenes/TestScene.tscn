@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://dol376qsjal3h"]
+[gd_scene load_steps=4 format=3 uid="uid://dol376qsjal3h"]
 
 [ext_resource type="PackedScene" uid="uid://nymso7v27gt7" path="res://Objects/Player/ghost_player.tscn" id="1_b5ayd"]
+[ext_resource type="PackedScene" uid="uid://bhdqwcptsojy6" path="res://Objects/obstacles/static_body_2d.tscn" id="2_5lt6y"]
+[ext_resource type="PackedScene" uid="uid://cu87k0ukvy0nh" path="res://Objects/obstacles/moveable_object.tscn" id="3_8k7wh"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -8,3 +10,14 @@
 zoom = Vector2(5, 5)
 
 [node name="ghostPlayer" parent="." instance=ExtResource("1_b5ayd")]
+collision_layer = 3
+
+[node name="StaticBody2D" parent="." instance=ExtResource("2_5lt6y")]
+position = Vector2(58, 1)
+collision_layer = 3
+collision_mask = 2
+
+[node name="Moveable Object" parent="." groups=["Movable"] instance=ExtResource("3_8k7wh")]
+position = Vector2(70, -26)
+collision_layer = 2
+collision_mask = 2
